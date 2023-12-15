@@ -1,7 +1,7 @@
 ﻿# LethalDataAPI
 
 ### Important
-> You have to sync data yourself. It doesn't do it automatically.
+> You have to sync data yourself. It doesn't do it automatically. You cannot load save or load data on Awake() in your Plugin.cs File.
 
 ### How To Use
 ```csharp
