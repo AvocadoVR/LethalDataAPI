@@ -17,6 +17,7 @@ namespace LethalDataAPI
 
         private Plugin Instance;
         public static string currentSave;
+        
 
         void Awake()
         {
@@ -24,8 +25,6 @@ namespace LethalDataAPI
             logger.LogWarning("LethalDataAPI Loaded!");
             
             harmony.PatchAll(typeof(StartOfRoundPatch));
-
-            int test = LethalData.Load<int>("test");
         }
     }
 }

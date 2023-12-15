@@ -20,7 +20,7 @@ namespace LethalDataAPI
             }
         }
 
-        public static void Save<T>(string key, T value)
+        public void Save<T>(string key, T value)
         {
             string currentSave = Plugin.currentSave;
             if (string.IsNullOrEmpty(currentSave)) return;
@@ -45,7 +45,7 @@ namespace LethalDataAPI
             File.WriteAllText(_dir, jsonData);
         }
 
-        public static T? Load<T>(string key)
+        public T? Load<T>(string key)
         {
             string currentSave = Plugin.currentSave;
             string _dir = Path.Combine(dir, currentSave + ".json");
