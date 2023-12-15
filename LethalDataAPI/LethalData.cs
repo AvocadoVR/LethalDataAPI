@@ -23,6 +23,7 @@ namespace LethalDataAPI
         public static void Save<T>(string key, T value)
         {
             string currentSave = Plugin.currentSave;
+            if (string.IsNullOrEmpty(currentSave)) return;
             string _dir = Path.Combine(dir, currentSave + ".json");
 
             Dictionary<string, object> currentData;
@@ -66,7 +67,7 @@ namespace LethalDataAPI
                 return (T?)value;
             }
 
-            return (T?)(object)null;
+            return default(T);
         }
     }
 }
